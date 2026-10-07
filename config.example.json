@@ -1,0 +1,41 @@
+{
+  "_说明": "复制本文件为 config.json 后修改。accounts 里填你自己的账号备注名，登录用 `node checkin.mjs add <名字>`。",
+  "baseUrl": "https://www.workbuddy.cn",
+  "creditToYuan": 0.02,
+  "baseCandidates": [
+    "https://www.workbuddy.cn",
+    "https://www.workbuddy.ai"
+  ],
+  "loginUrl": "https://www.workbuddy.cn/login/",
+  "accounts": [
+    {
+      "name": "主号",
+      "loginUrl": "https://www.workbuddy.cn/login/"
+    },
+    {
+      "name": "小号1",
+      "loginUrl": "https://www.workbuddy.cn/login/"
+    }
+  ],
+  "traework": {
+    "enabled": true,
+    "label": "TraeWork",
+    "storages": [],
+    "disabled": []
+  },
+  "timeoutMs": 30000,
+  "browser": "edge",
+  "checkinLockPort": 47940,
+  "growth": {
+    "enabled": true
+  },
+  "notify": {
+    "enabled": true,
+    "onlyOnFailure": false,
+    "channels": [
+      {
+        "type": "macos"
+      }
+    ]
+  }
+}

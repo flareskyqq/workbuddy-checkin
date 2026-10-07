@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20width%3D%221024%22%20height%3D%221024%22%3E%20%3Cdefs%3E%20%3ClinearGradient%20id%3D%22bg-orange%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220.35%22%20y2%3D%221%22%3E%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23FFDDAF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23FB9B3C%22%2F%3E%20%3C%2FlinearGradient%3E%20%3ClinearGradient%20id%3D%22fur-orange%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23FFFFFF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23FFE8CF%22%2F%3E%20%3C%2FlinearGradient%3E%20%3Cfilter%20id%3D%22soft-orange%22%20x%3D%22-30%25%22%20y%3D%22-30%25%22%20width%3D%22160%25%22%20height%3D%22160%25%22%3E%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2214%22%20stdDeviation%3D%2220%22%20flood-color%3D%22%23000%22%20flood-opacity%3D%220.20%22%2F%3E%20%3C%2Ffilter%3E%20%3C%2Fdefs%3E%20%3C!--%20macOS%20%E5%9B%BE%E6%A0%87%E8%A7%84%E8%8C%83%EF%BC%9A%E5%86%85%E5%AE%B9%E5%8D%A0%E7%94%BB%E5%B8%83%20824%2F1024%EF%BC%8C%E5%9B%9B%E5%91%A8%E7%95%99%E9%80%8F%E6%98%8E%E8%BE%B9%E8%B7%9D%EF%BC%8C%E8%BF%99%E6%A0%B7%E6%89%8D%E5%92%8C%E5%85%B6%E5%AE%83%20App%20%E5%9B%BE%E6%A0%87%E4%B8%80%E6%A0%B7%E5%A4%A7%20--%3E%20%3Cg%20transform%3D%22translate(92%2092)%20scale(0.8203125)%22%3E%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%221024%22%20height%3D%221024%22%20rx%3D%22228%22%20fill%3D%22url(%23bg-orange)%22%2F%3E%20%3Cg%20transform%3D%22translate(512%20556)%20scale(1.06)%20translate(-512%20-556)%22%3E%20%3C!--%20%E8%80%B3%E6%9C%B5%20--%3E%20%3Cpath%20d%3D%22M312%20470%20L276%20250%20Q270%20216%20302%20228%20L474%20316%20Z%22%20fill%3D%22url(%23fur-orange)%22%2F%3E%20%3Cpath%20d%3D%22M712%20470%20L748%20250%20Q754%20216%20722%20228%20L550%20316%20Z%22%20fill%3D%22url(%23fur-orange)%22%2F%3E%20%3Cpath%20d%3D%22M338%20436%20L320%20286%20Q318%20266%20336%20274%20L444%20324%20Z%22%20fill%3D%22%23FFB4A0%22%2F%3E%20%3Cpath%20d%3D%22M686%20436%20L704%20286%20Q706%20266%20688%20274%20L580%20324%20Z%22%20fill%3D%22%23FFB4A0%22%2F%3E%20%3C!--%20%E5%A4%B4%20--%3E%20%3Cellipse%20cx%3D%22512%22%20cy%3D%22580%22%20rx%3D%22290%22%20ry%3D%22256%22%20fill%3D%22url(%23fur-orange)%22%2F%3E%20%3Cg%20stroke%3D%22%23F2A25C%22%20stroke-width%3D%2220%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%20opacity%3D%220.9%22%3E%20%3Cpath%20d%3D%22M470%20392%20q%208%20-34%203%20-52%22%2F%3E%20%3Cpath%20d%3D%22M512%20384%20q%200%20-38%200%20-56%22%2F%3E%20%3Cpath%20d%3D%22M554%20392%20q%20-8%20-34%20-3%20-52%22%2F%3E%20%3C%2Fg%3E%20%3C!--%20%E7%9C%BC%E7%9D%9B%20--%3E%20%3Cellipse%20cx%3D%22408%22%20cy%3D%22572%22%20rx%3D%2247%22%20ry%3D%2255%22%20fill%3D%22%233A2A22%22%2F%3E%20%3Cellipse%20cx%3D%22616%22%20cy%3D%22572%22%20rx%3D%2247%22%20ry%3D%2255%22%20fill%3D%22%233A2A22%22%2F%3E%20%3Ccircle%20cx%3D%22392%22%20cy%3D%22550%22%20r%3D%2216%22%20fill%3D%22%23fff%22%2F%3E%20%3Ccircle%20cx%3D%22600%22%20cy%3D%22550%22%20r%3D%2216%22%20fill%3D%22%23fff%22%2F%3E%20%3Ccircle%20cx%3D%22422%22%20cy%3D%22594%22%20r%3D%228%22%20fill%3D%22%23fff%22%20opacity%3D%220.75%22%2F%3E%20%3Ccircle%20cx%3D%22630%22%20cy%3D%22594%22%20r%3D%228%22%20fill%3D%22%23fff%22%20opacity%3D%220.75%22%2F%3E%20%3C!--%20%E8%85%AE%E7%BA%A2%20--%3E%20%3Cellipse%20cx%3D%22336%22%20cy%3D%22662%22%20rx%3D%2250%22%20ry%3D%2231%22%20fill%3D%22%23FF9DB0%22%20opacity%3D%220.55%22%2F%3E%20%3Cellipse%20cx%3D%22688%22%20cy%3D%22662%22%20rx%3D%2250%22%20ry%3D%2231%22%20fill%3D%22%23FF9DB0%22%20opacity%3D%220.55%22%2F%3E%20%3C!--%20%E9%BC%BB%E5%AD%90%20%2B%20%E5%98%B4%20--%3E%20%3Cpath%20d%3D%22M512%20630%20q%2031%200%2031%2023%20q%200%2027%20-31%2041%20q%20-31%20-14%20-31%20-41%20q%200%20-23%2031%20-23%20Z%22%20fill%3D%22%23FF8FA3%22%2F%3E%20%3Cpath%20d%3D%22M512%20700%20q%20-27%2041%20-60%206%22%20stroke%3D%22%233A2A22%22%20stroke-width%3D%2217%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%20%3Cpath%20d%3D%22M512%20700%20q%2027%2041%2060%206%22%20stroke%3D%22%233A2A22%22%20stroke-width%3D%2217%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%20%3C!--%20%E8%83%A1%E9%A1%BB%20--%3E%20%3Cg%20stroke%3D%22%236B5140%22%20stroke-width%3D%2212%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.5%22%20fill%3D%22none%22%3E%20%3Cpath%20d%3D%22M250%20612%20L138%20586%22%2F%3E%3Cpath%20d%3D%22M246%20668%20L128%20668%22%2F%3E%3Cpath%20d%3D%22M254%20722%20L146%20752%22%2F%3E%20%3Cpath%20d%3D%22M774%20612%20L886%20586%22%2F%3E%3Cpath%20d%3D%22M778%20668%20L896%20668%22%2F%3E%3Cpath%20d%3D%22M770%20722%20L878%20752%22%2F%3E%20%3C%2Fg%3E%20%3C%2Fg%3E%20%3C%2Fg%3E%20%3C%2Fsvg%3E" />
+<title>WorkBuddy 积分看板</title>
+<meta name="apple-mobile-web-app-title" content="WorkBuddy积分" />
+<style>
+  :root{
+    /* 日式极简：和纸底 + 墨字 + 朱色点缀。中性色带极微暖调（chroma≈0.005）避免"死灰"。
+       配色用 OKLCH——感知均匀，同色相调明暗不会发脏。 */
+    --bg:oklch(97.4% 0.005 78);
+    --bg2:oklch(98.8% 0.003 78);
+    --panel:oklch(99.6% 0.002 78);
+    --panel2:oklch(97.8% 0.004 78);
+    --panel3:oklch(96.0% 0.005 78);
+    --line:oklch(87% 0.008 78);
+    --line2:oklch(93.5% 0.005 78);
+    --text:oklch(25% 0.012 68);          /* 墨——不是纯黑 */
+    --muted:oklch(46% 0.012 68);
+    --muted2:oklch(50% 0.010 68);
+    --accent:oklch(54% 0.150 32);        /* 朱（朱砂）——全站唯一的强调色，占比 <10% */
+    --accent2:oklch(62% 0.125 34);
+    --accent-soft:oklch(95.5% 0.020 36);
+    --green:oklch(51% 0.080 152);        /* 苔绿 */
+    --green-soft:oklch(96% 0.020 152);
+    --amber:oklch(58% 0.100 72);
+    --amber-soft:oklch(96.5% 0.026 78);
+    --red:oklch(51% 0.145 28);
+    --red-soft:oklch(96% 0.022 30);
+    --shadow:none;                       /* 极简不用阴影，层次靠细线与留白 */
+    --shadow-sm:none;
+    --serif:"Songti SC","Noto Serif SC","Source Han Serif SC","Hiragino Mincho ProN",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,monospace;
+    --r:2px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;color:var(--text);
+    font:14.5px/1.7 var(--sans);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    font-variant-numeric:tabular-nums;
+  }
+  .wrap{max-width:1160px;margin:0 auto;padding:44px 32px 88px;position:relative;z-index:1}
+
+  /* ===== 顶部 ===== */
+  header{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;
+         padding-bottom:22px;margin-bottom:36px;border-bottom:1px solid var(--line)}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .logo{width:34px;height:34px;opacity:.9}
+  h1{font-family:var(--serif);font-size:23px;margin:0;font-weight:600;letter-spacing:.06em;color:var(--text)}
+  .sub{color:var(--muted2);font-size:12.5px;margin-top:3px;letter-spacing:.02em}
+  .spacer{flex:1}
+  .paw-fixed{display:none}                 /* 去掉背景猫爪装饰 */
+
+  button{background:transparent;color:var(--text);border:1px solid var(--line);border-radius:var(--r);
+         padding:8px 15px;font-size:12.5px;font-family:inherit;cursor:pointer;
+         transition:border-color .18s, color .18s, background-color .18s;letter-spacing:.02em}
+  button:hover{background:var(--panel2);border-color:var(--muted2)}
+  button:active{background:var(--panel3)}
+  button.primary{background:var(--accent);border-color:var(--accent);color:oklch(98% 0.01 36);font-weight:500}
+  button.primary:hover{background:var(--accent2);border-color:var(--accent2)}
+  button:disabled{opacity:.42;cursor:default}
+  button:disabled:hover{background:transparent;border-color:var(--line)}
+  button.mini{padding:4px 10px;font-size:12px}
+  button.mini.danger{color:var(--red);border-color:var(--line)}
+  button.mini.danger:hover{background:var(--red-soft);border-color:var(--red)}
+  .btn-group{display:flex;gap:7px;justify-content:flex-end}
+
+  /* ===== 指标卡：去卡片化，只用细线分隔 ===== */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+         gap:0;margin-bottom:36px;border-top:1px solid var(--line)}
+  .card{position:relative;overflow:visible;background:transparent;border:none;border-radius:0;
+        border-bottom:1px solid var(--line);padding:22px 20px 20px 0}
+  .card::before{content:none}
+  .card .k{color:var(--muted2);font-size:12px;margin-bottom:9px;letter-spacing:.08em}
+  .card .v{font-family:var(--serif);font-size:32px;font-weight:700;letter-spacing:.01em;
+           color:var(--text);line-height:1.15}
+  .card .d{color:var(--muted2);font-size:12px;margin-top:7px}
+  .unit{font-family:var(--sans);font-size:12px;font-weight:400;color:var(--muted2);margin-left:5px;letter-spacing:.04em}
+  .cny{color:var(--muted);font-size:12px;font-weight:400;font-family:var(--mono)}
+  .card .d .cny{font-size:11.5px}
+
+  .panel{background:transparent;border:none;border-top:1px solid var(--line);
+         border-radius:0;padding:26px 0 8px;margin-bottom:0}
+  .panel h2{font-family:var(--serif);font-size:14.5px;margin:0 0 22px;font-weight:600;
+            color:var(--text);display:flex;align-items:baseline;gap:8px;letter-spacing:.06em}
+  .panel h2 .pawicon{display:none}
+  .muted{color:var(--muted2)}
+
+  /* ===== 表格 ===== */
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{color:var(--muted2);font-weight:500;text-align:left;padding:0 14px 11px 0;
+     background:transparent;border-bottom:1px solid var(--line);white-space:nowrap;
+     font-size:12px;letter-spacing:.06em}
+  th:first-child{border-radius:0}
+  th:last-child{border-radius:0}
+  td{padding:14px 14px 14px 0;border-bottom:1px solid var(--line2);white-space:nowrap;color:var(--text)}
+  tr.row{cursor:pointer;transition:background-color .16s}
+  tr.row:hover td{background:var(--panel2)}
+  tr.row:last-child td{border-bottom:none}
+
+  .pill{display:inline-flex;align-items:center;gap:5px;padding:2px 0;font-size:12.5px;
+        font-weight:500;letter-spacing:.02em}
+  .pill::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;flex:0 0 auto}
+  .pill.ok{background:transparent;color:var(--green)}
+  .pill.no{background:transparent;color:var(--red)}
+  .pill.mute{background:transparent;color:var(--muted2)}
+  td .pill{margin-right:14px}
+  td .pill:last-child{margin-right:0}
+  .num{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+  .right{text-align:right}
+  .empty{color:var(--muted2);padding:52px 24px;text-align:center;
+         border:1px dashed var(--line);background:transparent;font-size:13px;letter-spacing:.02em}
+  .legend{display:flex;gap:22px;color:var(--muted);font-size:12px;margin-top:20px;
+          flex-wrap:wrap;align-items:center;letter-spacing:.04em}
+  .dot{display:inline-block;width:16px;height:3px;border-radius:0;margin-right:8px;vertical-align:3px}
+
+  /* ===== 条形图：去掉渐变与内阴影 ===== */
+  .bars{display:flex;flex-direction:column;gap:20px}
+  .barrow{display:grid;grid-template-columns:170px 1fr 250px;align-items:center;gap:24px}
+  .barrow .barname{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+                   font-size:13.5px;font-weight:400;color:var(--text);letter-spacing:.02em}
+  .track{height:8px;border-radius:1px;background:var(--line);border-radius:0;overflow:hidden;display:flex;box-shadow:none}
+  .seg{height:100%}
+  .seg.remain{background:var(--accent);box-shadow:none}
+  .seg.used{background:var(--muted);opacity:.45;box-shadow:none}
+  .barvals{text-align:right;line-height:1.55;font-size:13px;font-family:var(--mono);
+           white-space:nowrap;color:var(--muted)}
+  .barvals .cny{font-size:11.5px;font-family:var(--mono);color:var(--muted2)}
+
+  pre{background:var(--panel2);border:1px solid var(--line);border-radius:var(--r);padding:16px;
+      font-size:11.5px;font-family:var(--mono);max-height:280px;overflow:auto;
+      color:var(--muted);margin:0;line-height:1.85}
+
+  /* ===== 抽屉 ===== */
+  .drawer{position:fixed;top:0;right:0;height:100%;width:min(560px,94vw);background:var(--bg2);
+          border-left:1px solid var(--line);transform:translateX(102%);
+          transition:transform .3s cubic-bezier(.22,1,.36,1);
+          z-index:20;overflow:auto;padding:40px 36px;box-shadow:none}
+  .drawer.open{transform:none}
+  .drawer h3{margin:0 0 6px;font-family:var(--serif);font-size:19px;font-weight:600;
+             color:var(--text);letter-spacing:.05em}
+  .close{position:absolute;top:26px;right:30px}
+  .kv{display:grid;grid-template-columns:auto 1fr;gap:11px 22px;font-size:12.5px;margin:22px 0 32px}
+  .kv .muted{white-space:nowrap;color:var(--muted2);font-size:12px;letter-spacing:.06em}
+  .secTitle{font-family:var(--serif);font-size:13.5px;font-weight:600;color:var(--text);
+            margin:0 0 14px;letter-spacing:.06em}
+  .secTitle+.heat,.secTitle+#dPackages,.secTitle+#dHistory{margin-bottom:34px}
+  #dPackages+#dHistory,.heat+.secTitle{margin-top:38px}
+
+  /* ===== 签到热力图 ===== */
+  .heat{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,1fr);gap:3px}
+  .cell{width:14px;height:14px;border-radius:1px;background:var(--panel3)}
+  .cell.on{background:var(--green);opacity:.85}
+  .cell.today{outline:1px solid var(--accent);outline-offset:1px}
+
+  /* ===== 弹窗 / 提示 ===== */
+  .modal{position:fixed;inset:0;background:oklch(25% 0.012 68 / .28);
+         display:none;align-items:center;justify-content:center;z-index:60}
+  .modal.open{display:flex}
+  .modalbox{width:min(540px,92vw);background:var(--bg2);border:1px solid var(--line);
+            border-radius:var(--r);padding:36px;box-shadow:none}
+  .modalbox h3{margin:0 0 8px;font-family:var(--serif);font-size:18px;font-weight:600;
+               color:var(--text);letter-spacing:.05em}
+  #accName,#renameInput{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--text);
+      border-radius:var(--r);padding:11px 13px;font-size:13.5px;font-family:inherit;
+      margin:20px 0 14px;outline:none;transition:border-color .18s}
+  #accName:focus,#renameInput:focus{border-color:var(--accent);box-shadow:none;background:var(--panel)}
+  .radios{display:flex;gap:22px;color:var(--muted);font-size:12.5px;margin-bottom:4px}
+  .radios label{display:flex;align-items:center;gap:7px;cursor:pointer}
+  .btnrow{display:flex;gap:11px;justify-content:flex-end;margin-top:28px}
+  #addLog{display:none;margin-top:18px;max-height:180px}
+  .toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%);background:var(--text);
+         border:none;padding:13px 22px;border-radius:var(--r);color:var(--bg2);display:none;
+         z-index:40;max-width:82vw;font-size:13px;box-shadow:none;letter-spacing:.02em}
+  .toast pre{background:oklch(32% 0.012 68);border-color:oklch(40% 0.012 68);
+             color:var(--bg2);margin:10px 0 0;max-height:120px}
+  .spin{display:inline-block;width:11px;height:11px;border:1.5px solid var(--line);
+        border-top-color:var(--accent);border-radius:50%;
+        animation:sp .8s cubic-bezier(.4,0,.2,1) infinite;vertical-align:-2px;margin-right:8px}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  }
+  @media (max-width:900px){
+    .wrap{padding:40px 22px 80px}
+    .barrow{grid-template-columns:100px 1fr 150px;gap:14px}
+    .barvals{font-size:11.5px}
+    .cards{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  }
+</style>
+</head>
+<body>
+<svg class="paw-fixed" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g fill="#b04a30">
+<ellipse cx="100" cy="132" rx="42" ry="36"/><ellipse cx="46" cy="88" rx="19" ry="24"/><ellipse cx="84" cy="64" rx="19" ry="24"/>
+<ellipse cx="126" cy="66" rx="19" ry="24"/><ellipse cx="162" cy="98" rx="19" ry="24"/>
+<ellipse cx="60" cy="168" rx="15" ry="18"/><ellipse cx="100" cy="180" rx="15" ry="18"/><ellipse cx="140" cy="168" rx="15" ry="18"/>
+</g></svg>
+<div class="wrap">
+  <header>
+        <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="小猫">
+        <defs><linearGradient id="cg" x1="0" y1="0" x2=".45" y2="1">
+          <stop offset="0" stop-color="#3a3532"/><stop offset="1" stop-color="#221f1c"/></linearGradient></defs>
+        <rect width="64" height="64" rx="17" fill="url(#cg)"/>
+        <path d="M18 25 L15 11 Q14.4 8.4 17 9.4 L27 15 Z" fill="#f5f1ec"/>
+        <path d="M46 25 L49 11 Q49.6 8.4 47 9.4 L37 15 Z" fill="#f5f1ec"/>
+        <path d="M20 24 L18 14.5 Q17.8 13 19.3 13.6 L26 17 Z" fill="#c9705a" opacity=".55"/>
+        <path d="M44 24 L46 14.5 Q46.2 13 44.7 13.6 L38 17 Z" fill="#c9705a" opacity=".55"/>
+        <ellipse cx="32" cy="37" rx="19" ry="17" fill="#f5f1ec"/>
+        <ellipse cx="25" cy="36" rx="3.3" ry="4" fill="#221f1c"/>
+        <ellipse cx="39" cy="36" rx="3.3" ry="4" fill="#221f1c"/>
+        <circle cx="23.9" cy="34.2" r="1.15" fill="#f5f1ec"/>
+        <circle cx="37.9" cy="34.2" r="1.15" fill="#f5f1ec"/>
+        <ellipse cx="18.5" cy="42" rx="3.4" ry="2.2" fill="#c9705a" opacity=".45"/>
+        <ellipse cx="45.5" cy="42" rx="3.4" ry="2.2" fill="#c9705a" opacity=".45"/>
+        <path d="M32 41 q 2.9 0 2.9 2 q 0 2.4 -2.9 3.6 q -2.9 -1.2 -2.9 -3.6 q 0 -2 2.9 -2 Z" fill="#b04a30"/>
+        <path d="M32 46.6 q -2.6 3.4 -5.4 .6 M32 46.6 q 2.6 3.4 5.4 .6" stroke="#221f1c" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        <path d="M16 36 l-7 -2 M16 40 h-7.4 M17 44 l-7 2.4 M48 36 l7 -2 M48 40 h7.4 M47 44 l7 2.4"
+              stroke="#8a8079" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1>WorkBuddy 积分看板</h1>
+        <div class="sub" id="updated">加载中…</div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <button class="primary" id="btnAdd">+ 添加 WorkBuddy 账号</button>
+    <button id="btnAddTrae">+ 添加 TraeWork 账号</button>
+    <button class="primary" id="btnCheckin">立即签到全部账号</button>
+    <button id="btnStats">只刷新数据</button>
+    <button id="btnReload">重新载入</button>
+  </header>
+
+  <div class="cards" id="cards"></div>
+
+  <div class="panel" style="margin-bottom:20px">
+    <h2><svg class="pawicon" viewBox="0 0 24 24" width="15" height="15" fill="#b04a30" opacity=".8"><ellipse cx="12" cy="16.2" rx="5.1" ry="4.3"/><ellipse cx="5.7" cy="10.6" rx="2.3" ry="2.9"/><ellipse cx="10.3" cy="7.6" rx="2.3" ry="2.9"/><ellipse cx="15.7" cy="8" rx="2.3" ry="2.9"/><ellipse cx="19" cy="11.8" rx="2.3" ry="2.9"/></svg>各账号积分（剩余 / 已使用）<span id="rateHint" class="muted" style="font-weight:400;font-size:12px;margin-left:10px"></span></h2>
+    <div class="bars" id="bars"></div>
+    <div class="legend">
+      <span><i class="dot" style="background:var(--accent)"></i>剩余积分</span>
+      <span><i class="dot" style="background:var(--muted2)"></i>已使用</span>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-bottom:20px">
+    <h2><svg class="pawicon" viewBox="0 0 24 24" width="15" height="15" fill="#b04a30" opacity=".8"><ellipse cx="12" cy="16.2" rx="5.1" ry="4.3"/><ellipse cx="5.7" cy="10.6" rx="2.3" ry="2.9"/><ellipse cx="10.3" cy="7.6" rx="2.3" ry="2.9"/><ellipse cx="15.7" cy="8" rx="2.3" ry="2.9"/><ellipse cx="19" cy="11.8" rx="2.3" ry="2.9"/></svg>账号明细（点击查看详情）</h2>
+    <div id="tableWrap"><div class="empty">还没有数据，先执行 <code>node checkin.mjs add 账号名</code> 登录，然后 <code>node checkin.mjs checkin</code>。</div></div>
+  </div>
+
+  <div class="panel">
+    <h2><svg class="pawicon" viewBox="0 0 24 24" width="15" height="15" fill="#b04a30" opacity=".8"><ellipse cx="12" cy="16.2" rx="5.1" ry="4.3"/><ellipse cx="5.7" cy="10.6" rx="2.3" ry="2.9"/><ellipse cx="10.3" cy="7.6" rx="2.3" ry="2.9"/><ellipse cx="15.7" cy="8" rx="2.3" ry="2.9"/><ellipse cx="19" cy="11.8" rx="2.3" ry="2.9"/></svg>最近运行日志</h2>
+    <pre id="logbox">—</pre>
+  </div>
+</div>
+
+<div class="drawer" id="drawer">
+  <button class="close" onclick="closeDrawer()">关闭</button>
+  <h3 id="dTitle">账号</h3>
+  <div class="sub" id="dSub"></div>
+  <div class="kv" id="dKv"></div>
+  <h2 class="secTitle">最近 9 周签到</h2>
+  <div class="heat" id="dHeat"></div>
+  <h2 class="secTitle">资源包明细</h2>
+  <div id="dPackages"></div>
+  <h2 class="secTitle">每日记录</h2>
+  <div id="dHistory"></div>
+  <div id="dFooter" style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:flex-end"></div>
+</div>
+
+<div class="modal" id="addModal">
+  <div class="modalbox">
+    <h3 id="addTitle">添加 WorkBuddy 账号</h3>
+    <div class="sub" id="addSub">填一个备注名，点「开始登录」后会弹出一个浏览器窗口，在里面登录 WorkBuddy（扫码或密码都行）。<br>登录成功会自动关闭并把积分数据读进来。</div>
+    <input type="text" id="accName" placeholder="账号备注名，例如：小号1" autocomplete="off" />
+    <div class="radios" id="addSites">
+      <label><input type="radio" name="accSite" value="cn" checked /> 国内版 workbuddy.cn</label>
+      <label><input type="radio" name="accSite" value="intl" /> 国际版 workbuddy.ai</label>
+    </div>
+    <div id="qrBox" style="display:none;text-align:center;margin:16px 0 4px">
+      <div class="sub" id="qrHint">用手机微信扫下面的二维码登录 —— 全程不打开浏览器窗口</div>
+      <div style="margin-top:12px;min-height:206px;display:flex;align-items:center;justify-content:center">
+        <img id="qrImg" alt="登录二维码" style="width:200px;height:200px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:8px;display:none" />
+        <div id="qrWait" class="muted" style="font-size:13px"><span class="spin"></span>正在获取二维码…</div>
+      </div>
+      <div class="sub" id="qrStatus" style="margin:10px 0 8px"></div>
+      <button class="mini" id="qrFallback">改用浏览器窗口登录（可用手机号 / 邮箱）</button>
+    </div>
+    <pre id="addLog"></pre>
+    <div class="btnrow">
+      <button id="accCancel">取消</button>
+      <button class="primary" id="accGo">开始扫码登录</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="renameModal">
+  <div class="modalbox">
+    <h3>修改账号名字</h3>
+    <div class="sub">只改显示用的备注名，登录状态、积分数据都会跟着迁移，不影响签到。</div>
+    <input type="text" id="renameInput" autocomplete="off" />
+    <div class="btnrow">
+      <button id="renameCancel">取消</button>
+      <button class="primary" id="renameGo">保存</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const nf = (n) => (n === null || n === undefined || Number.isNaN(Number(n))) ? '—' : Number(n).toLocaleString('zh-CN', { maximumFractionDigits: 2 });
+let DATA = null;
+
+function toast(msg, ms = 2600) {
+  const t = $('#toast');
+  t.innerHTML = msg;
+  t.style.display = 'block';
+  clearTimeout(t._t);
+  t._t = setTimeout(() => (t.style.display = 'none'), ms);
+}
+
+async function load() {
+  const r = await fetch('/api/data', { cache: 'no-store' });
+  DATA = await r.json();
+  render();
+}
+
+function accounts() {
+  const list = Object.entries(DATA?.accounts || {}).map(([k, v]) => ({ ...v, _key: k }));
+  const have = new Set(list.map((a) => a.name));
+  for (const c of DATA?.configAccounts || []) {
+    if (!have.has(c.name)) list.push({ name: c.name, site: c.loginUrl, _key: c.name, _pending: true, _disabled: c.enabled === false });
+    else {
+      const hit = list.find((a) => a.name === c.name);
+      if (hit) hit._disabled = c.enabled === false;
+    }
+  }
+  // 同一个 WorkBuddy 账号被添加了两次 → 互相顶掉登录态，标出来
+  const byUid = {};
+  for (const a of list) if (a.uid) (byUid[a.uid] = byUid[a.uid] || []).push(a);
+  for (const uid of Object.keys(byUid)) {
+    const g = byUid[uid];
+    if (g.length > 1) for (const a of g) a._dupWith = g.filter((x) => x !== a).map((x) => x.name).join('、');
+  }
+
+  // TraeWork 站点：独立积分口径，单独标记，不参与 WorkBuddy 的金额换算
+  const twLabel = DATA?.traework?.label || 'TraeWork';
+  for (const [k, t] of Object.entries(DATA?.traework?.accounts || {})) {
+    list.push({
+      ...t,
+      _key: 'trae:' + k,
+      _platform: 'traework',
+      _label: twLabel,
+      site: twLabel,
+      balance: t.creditsTotal,
+      used: t.consumed,
+      lastRunAt: t.lastRunAt,
+    });
+  }
+  return list.sort((a, b) => (b.balance || 0) - (a.balance || 0));
+}
+
+function render() {
+  const all = accounts();
+  const active = all.filter((a) => !a._disabled);   // 已停用的账号不计入统计
+  const disabled = all.filter((a) => a._disabled);
+  /* 顶部统计与柱状图沿用 WorkBuddy 口径；TraeWork 积分体系不同，单独成卡 */
+  const list = active.filter((a) => a._platform !== 'traework');
+  const twList = active.filter((a) => a._platform === 'traework');
+  const twLabel = DATA?.traework?.label || 'TraeWork';
+
+  const fmtT = (v) => (v ? new Date(v).toLocaleString('zh-CN', { hour12: false }) : '从未采集');
+  $('#updated').textContent =
+    `WorkBuddy：${fmtT(DATA?.updatedAt)}（data/state.json）　·　${twLabel}：${fmtT(DATA?.traework?.updatedAt)}（data/trae.json）`;
+
+  const totalBalance = list.reduce((s, a) => s + (a.balance || 0), 0);
+  const totalUsed = list.reduce((s, a) => s + (a.used || 0), 0);
+  const todayOk = list.filter((a) => a.todayCheckedIn).length;
+  const gainedAll = list.reduce((s, a) =>
+    s + (a.totalCredits ?? (a.history || []).reduce((x, h) => x + (h.credit || 0), 0)), 0);
+  const maxStreak = list.reduce((m, a) => Math.max(m, a.streakDays || 0), 0);
+
+  const rate = Number(DATA?.rate) > 0 ? Number(DATA.rate) : 0.02;
+  const yuan = (credit) => '¥' + Number((credit || 0) * rate).toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  $('#rateHint').textContent = `按 ¥${rate}/积分 折算（仅 WorkBuddy，可在 config.json 改 creditToYuan）`;
+
+  const cards = [
+    ['WorkBuddy 账号', nf(list.length), `已登录 ${list.filter((a) => a.lastRunAt).length} 个${disabled.length ? `　·　已停用 ${disabled.length} 个` : ''}`],
+    ['今日已签到', `${todayOk}/${list.length}`, list.length ? (todayOk === list.length ? '全部完成' : '还有账号未签到') : '暂无账号'],
+    ['剩余积分合计', nf(totalBalance) + '<span class="unit">积分</span>', `所有账号当前可用积分　<b class="cny">≈ ${yuan(totalBalance)}</b>`],
+    ['已使用积分合计', nf(totalUsed) + '<span class="unit">积分</span>', `累计消耗　<b class="cny">≈ ${yuan(totalUsed)}</b>`],
+    ['累计签到领取', nf(gainedAll) + '<span class="unit">积分</span>', `最长连续签到 ${maxStreak} 天　<b class="cny">≈ ${yuan(gainedAll)}</b>`],
+  ];
+  if (twList.length) {
+    const twTotal = twList.reduce((s, a) => s + (a.balance || 0), 0);
+    const twUsed = twList.reduce((s, a) => s + (a.used || 0), 0);
+    const twOk = twList.filter((a) => a.todayCheckedIn).length;
+    cards.push([
+      `${twLabel} 积分`,
+      nf(twTotal) + '<span class="unit">积分</span>',
+      `今日已签 ${twOk}/${twList.length}${twUsed ? `　·　已用 ${nf(twUsed)}` : ''}　·　独立积分口径`,
+    ]);
+  }
+  $('#cards').innerHTML = cards.map(([k, v, d]) => `<div class="card"><div class="k">${k}</div><div class="v num">${v}</div><div class="d">${d}</div></div>`).join('');
+
+  renderBars(list);
+  renderTable(all);
+  $('#logbox').textContent = DATA?.recentLog || '—';
+}
+
+function renderBars(list) {
+  if (!list.length) { $('#bars').innerHTML = '<div class="empty">暂无账号数据</div>'; return; }
+  const max = Math.max(...list.map((a) => (a.balance || 0) + (a.used || 0)), 1);
+  const rate = Number(DATA?.rate) > 0 ? Number(DATA.rate) : 0.02;
+  const yuan = (c) => '¥' + Number((c || 0) * rate).toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  $('#bars').innerHTML = list.map((a) => {
+    const r = a.balance || 0, u = a.used || 0;
+    const rp = (r / max) * 100, up = (u / max) * 100;
+    return `<div class="barrow">
+      <div class="barname" title="${esc(a.name)}">${esc(a.name)}${a.desktopConflict ? ' · 冲突' : ''}</div>
+      <div class="track" title="剩余 ${nf(r)} 积分 / 已用 ${nf(u)} 积分">
+        <div class="seg remain" style="width:${rp}%"></div><div class="seg used" style="width:${up}%"></div>
+      </div>
+      <div class="barvals">
+        <div><b class="num">${nf(r)}</b> 积分<span class="muted">／已用 ${nf(u)}</span></div>
+        <div class="cny">≈ ${yuan(r)}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+
+function renderTable(list) {
+  if (!list.length) return;
+  $('#tableWrap').innerHTML = `<table>
+    <thead><tr>
+      <th>账号</th><th>昵称</th><th>站点</th><th class="right">剩余积分</th><th class="right">已用积分</th>
+      <th class="right">连续签到</th><th>今日</th><th>上次更新</th><th></th>
+    </tr></thead>
+    <tbody>${list.map((a) => {
+      const tw = a._platform === 'traework';
+      const today = tw
+        ? `${a.todayCheckedIn ? '<span class="pill ok">已签到</span>' : '<span class="pill no">未签到</span>'}${a.tokenExpiredAt ? ` <span class="pill mute" title="TRAE 登录态到期时间，到期后打开一次 TRAE CN 即可自动刷新">${String(a.tokenExpiredAt).slice(0, 10)}</span>` : ''}`
+        : `${a._disabled ? '<span class="pill mute">已停用</span>' : a._pending ? '<span class="pill mute">未登录</span>' : (a.todayCheckedIn ? '<span class="pill ok">已签到</span>' : '<span class="pill no">未签到</span>')}${a._dupWith ? ' <span class="pill no" title="同一个账号被添加了两次，会互相顶掉登录态">重复</span>' : ''}${a.desktopConflict ? ' <span class="pill no" title="这个账号正被 WorkBuddy 桌面客户端使用；实测这不必然导致签到失败">被客户端占用</span>' : ''}`;
+      const isTraeWeb = tw && a.kind === 'web';
+      const actions = !tw
+        ? `<div class="btn-group"><button class="mini" onclick="openRename('${esc(a.name)}',event)">改名</button>${a._disabled ? '' : `<button class="mini" onclick="relogin('${esc(a.name)}','${esc(a.site || '')}',event)">${a._pending ? '去登录' : '重新登录'}</button>`}<button class="mini danger" onclick="deleteAcc('${esc(a.name)}',event)">删除</button></div>`
+        : isTraeWeb
+          ? `<div class="btn-group"><button class="mini" onclick="reloginTrae('${esc(a.name)}',event)">重新登录</button><button class="mini danger" onclick="deleteTrae('${esc(a.name)}',event)">删除</button></div>`
+          : '<span class="muted" style="font-size:12px">由 TRAE 客户端管理</span>';
+      return `<tr class="row" onclick="openDrawer('${esc(a._key || '')}')">
+      <td>${esc(a.name)}${tw ? ' <span class="pill mute">TraeWork</span>' : ''}</td>
+      <td class="muted">${esc(a.nickname || '—')}</td>
+      <td class="muted">${esc(tw ? (a._label || 'TraeWork') : (a.site || '').replace('https://', ''))}</td>
+      <td class="right num">${nf(a.balance)}</td>
+      <td class="right num">${nf(a.used)}</td>
+      <td class="right num">${a.streakDays ? a.streakDays + ' 天' : '—'}</td>
+      <td>${today}</td>
+      <td class="muted">${a.lastRunAt ? new Date(a.lastRunAt).toLocaleString('zh-CN', { hour12: false }) : '—'}</td>
+      <td class="right">${actions}</td>
+    </tr>`;
+    }).join('')}</tbody></table>`;
+}
+
+function openDrawer(key, name) {
+  /* TraeWork 账号走独立抽屉（字段体系不同） */
+  if (String(key || '').startsWith('trae:')) {
+    const t = (DATA.traework?.accounts || {})[String(key).slice(5)];
+    if (!t) return;
+    const label = DATA.traework?.label || 'TraeWork';
+    const when = (v) => (v ? new Date(v).toLocaleString('zh-CN', { hour12: false }) : '—');
+    $('#dTitle').textContent = `${t.name}（${label}）`;
+    $('#dSub').textContent = `${label}　·　用户ID ${t.userId || '—'}${t.source ? '　·　' + t.source : ''}`;
+    $('#dKv').innerHTML = [
+      ['总积分', nf(t.creditsTotal)], ['已用积分', nf(t.consumed)],
+      ['今日状态', t.todayCheckedIn ? '已签到' : '未签到'],
+      ['今日获得', t.todayCredits !== undefined ? t.todayCredits + ' 积分' : '—'],
+      ['额外奖励', t.extraCredits ? t.extraCredits + ' 积分' : '—'],
+      ['登录态到期', when(t.tokenExpiredAt)],
+      ['上次运行', when(t.lastRunAt)],
+    ].map(([k, v]) => `<div class="muted">${k}</div><div>${v}</div>`).join('');
+    $('#dHeat').innerHTML = '<div class="empty">TraeWork 暂无签到日历</div>';
+    const pk = t.packs || [];
+    $('#dPackages').innerHTML = pk.length
+      ? `<table><thead><tr><th>权益包</th><th class="right">额度</th><th class="right">到期</th></tr></thead>
+         <tbody>${pk.map((p) => `<tr><td>${esc(p.label)}</td><td class="right num">${nf(p.limit)}</td>
+         <td class="right muted">${p.expireAt ? String(p.expireAt).slice(0, 10) : '—'}</td></tr>`).join('')}</tbody></table>`
+      : '<div class="empty">没有权益包明细</div>';
+    const hist = (t.history || []).slice().reverse().slice(0, 30);
+    $('#dHistory').innerHTML = hist.length
+      ? `<table><thead><tr><th>日期</th><th class="right">签到领取</th><th class="right">状态</th></tr></thead>
+         <tbody>${hist.map((h) => `<tr><td>${esc(h.date)}</td><td class="right num">${h.credits ? '+' + h.credits : '—'}</td>
+         <td class="right">${h.checkedIn ? '已签到' : '未签到'}</td></tr>`).join('')}</tbody></table>`
+      : '<div class="empty">暂无记录</div>';
+    $('#dFooter').innerHTML = t.kind === 'web'
+      ? `<div class="btn-group"><button class="mini" onclick="reloginTrae('${esc(t.name)}',event)">重新登录</button><button class="mini danger" onclick="deleteTrae('${esc(t.name)}',event)">删除此账号</button></div>`
+      : '<span class="muted" style="font-size:12px">桌面客户端来源：本工具只读复用其登录态，不修改任何文件。要停用请在 TRAE 客户端里操作。</span>';
+    $('#drawer').classList.add('open');
+    return;
+  }
+  const a = (DATA.accounts || {})[key] || Object.values(DATA.accounts || {}).find((x) => x.name === name);
+  if (!a) return;
+  $('#dTitle').textContent = a.name + (a.nickname ? `（${a.nickname}）` : '');
+  $('#dSub').textContent = `${(a.site || '').replace('https://', '')}　${a.editionType ? '· ' + a.editionType : ''}${a.isPro ? ' · Pro' : ''}`;
+  const activityLine = a.activityName
+    ? `${a.activityName}${a.themeName ? '（' + a.themeName + '）' : ''}`
+    : '—';
+  const periodLine = a.activityStart ? `${String(a.activityStart).slice(0, 10)} ~ ${String(a.activityEnd).slice(0, 10)}` : '—';
+  $('#dKv').innerHTML = [
+    ['剩余积分', nf(a.balance)], ['已用积分', nf(a.used)], ['总配额', nf(a.quotaTotal)],
+    ['连续签到', a.streakDays ? a.streakDays + ' 天' : '—'],
+    ['累计签到领取', nf(a.totalCredits ?? (a.history || []).reduce((x, h) => x + (h.credit || 0), 0))],
+    ['每日奖励', a.dailyCredit ? a.dailyCredit + ' 积分' : '—'],
+    ['本周签到', a.weekCheckinDays !== undefined ? a.weekCheckinDays + ' 天' : '—'],
+    ['今日状态', a.todayCheckedIn ? '已签到' : '未签到'],
+    ['签到活动', activityLine], ['活动周期', periodLine],
+    ...(a._dupWith ? [['重复账号', `和「${a._dupWith}」是同一个 WorkBuddy 账号（同一用户ID），会互相顶掉登录态，建议删掉一个`]] : []),
+    ...(a.desktopConflict ? [['冲突', '这个账号正被 WorkBuddy 桌面客户端使用。实测表明这**不必然**导致签到失败（桌面客户端占用与登录态失效没有因果关系），可以忽略；真出问题用 tools/repair-state.mjs 修。']] : []),
+  ].map(([k, v]) => `<div class="muted">${k}</div><div>${v}</div>`).join('');
+
+  const days = 63;
+  const set = new Set(a.checkinDates || []);
+  const today = new Date().toISOString().slice(0, 10);
+  let cells = '';
+  for (let i = days - 1; i >= 0; i--) {
+    const d = new Date(Date.now() - i * 86400000).toISOString().slice(0, 10);
+    const on = set.has(d);
+    cells += `<div class="cell${on ? ' on' : ''}${d === today ? ' today' : ''}" title="${d}${on ? ' 已签到' : ''}"></div>`;
+  }
+  $('#dHeat').innerHTML = cells;
+
+  const pk = a.packageDetails?.length ? a.packageDetails : (a.packages || []);
+  $('#dPackages').innerHTML = pk.length
+    ? `<table><thead><tr><th>资源包</th><th class="right">总量</th><th class="right">剩余</th><th class="right">已用</th></tr></thead>
+       <tbody>${pk.map((p) => `<tr><td>${esc(p.label || p.code)}</td><td class="right num">${nf(p.total)}</td>
+       <td class="right num">${nf(p.remain)}</td><td class="right num">${nf(p.used)}</td></tr>`).join('')}</tbody></table>`
+    : '<div class="empty">没有资源包明细</div>';
+
+  const hist = (a.history || []).slice().reverse().slice(0, 30);
+  $('#dHistory').innerHTML = hist.length
+    ? `<table><thead><tr><th>日期</th><th class="right">签到领取</th><th class="right">余额</th><th class="right">已用</th></tr></thead>
+       <tbody>${hist.map((h) => `<tr><td>${h.date}</td><td class="right num">${h.credit ? '+' + h.credit : '—'}</td>
+       <td class="right num">${nf(h.balance)}</td><td class="right num">${nf(h.used)}</td></tr>`).join('')}</tbody></table>`
+     : '<div class="empty">暂无记录</div>';
+
+  $('#dFooter').innerHTML = `<button class="danger" style="padding:6px 14px;font-size:12px;border-radius:8px" onclick="deleteAcc('${esc(a.name)}')">删除此账号</button>`;
+  $('#drawer').classList.add('open');
+}
+function closeDrawer() { $('#drawer').classList.remove('open'); }
+
+async function runJob(cmd, btn) {
+  const old = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span>运行中…';
+  try {
+    const r = await fetch(`/api/run?cmd=${cmd}`, { method: 'POST' });
+    const { id } = await r.json();
+    toast(`已开始${cmd === 'checkin' ? '签到' : '刷新数据'}…`);
+    for (;;) {
+      await new Promise((s) => setTimeout(s, 1500));
+      const j = await (await fetch(`/api/job/${id}`)).json();
+      if (j.done) {
+        const lastLines = (j.output || '').trim().split('\n').slice(-4).join('\n');
+        toast(`<b>${cmd === 'checkin' ? '签到' : '刷新'}完成</b><pre style="margin:8px 0 0;max-height:120px">${esc(lastLines)}</pre>`, 9000);
+        await load();
+        break;
+      }
+    }
+  } catch (e) {
+    toast('运行失败：' + e.message);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = old;
+  }
+}
+
+let addMode = 'workbuddy';   // 'workbuddy' | 'traework'
+
+function openAdd(mode = 'workbuddy') {
+  addMode = mode;
+  const tw = mode === 'traework';
+  $('#addTitle').textContent = tw ? '添加 TraeWork 账号' : '添加 WorkBuddy 账号';
+  $('#addSub').innerHTML = tw
+    ? '填一个备注名，点「开始登录」后会弹出浏览器，在里面登录 TraeWork（右上角「登录」）。<br>登录成功后窗口会自动关闭并保存登录态，<b>之后每天签到不再需要浏览器</b>。'
+    : '填一个备注名、选好站点，点「开始扫码登录」后<b>二维码会直接显示在下面</b>。<br>用手机微信扫一扫即可 —— 全程不打开浏览器窗口，所以不会卡。<br>想用手机号 / 邮箱登录，点下面的「改用浏览器窗口登录」。';
+  $('#addSites').style.display = tw ? 'none' : '';
+  $('#accName').placeholder = tw ? '账号备注名，例如：账号C1号' : '账号备注名，例如：小号1';
+  $('#addModal').classList.add('open');
+  $('#accName').value = '';
+  $('#addLog').style.display = 'none';
+  $('#addLog').textContent = '';
+  setTimeout(() => $('#accName').focus(), 60);
+}
+function closeAdd() { $('#addModal').classList.remove('open'); stopQr(); }
+
+async function watchJob(id) {
+  const el = $('#addLog');
+  for (;;) {
+    await new Promise((r) => setTimeout(r, 1200));
+    let j;
+    try { j = await (await fetch('/api/job/' + id)).json(); } catch { continue; }
+    if (el && j.output) {
+      el.style.display = 'block';
+      el.textContent = j.output.trim().split('\n').slice(-14).join('\n');
+      el.scrollTop = el.scrollHeight;
+    }
+    if (j.done) return j;
+  }
+}
+
+let qrTimer = null, qrWho = '';
+function stopQr() {
+  if (qrTimer) clearInterval(qrTimer);
+  qrTimer = null; qrWho = '';
+  $('#qrBox').style.display = 'none';
+  $('#qrImg').style.display = 'none';
+  $('#qrWait').style.display = '';
+  $('#qrStatus').textContent = '';
+}
+function startQr(name) {
+  qrWho = name;
+  $('#qrBox').style.display = 'block';
+  $('#qrImg').style.display = 'none';
+  $('#qrWait').style.display = '';
+  const tick = async () => {
+    if (qrWho !== name) return;
+    try {
+      const r = await fetch('/api/qr/' + encodeURIComponent(name) + '?t=' + Date.now(), { cache: 'no-store' });
+      if (!r.ok) { $('#qrStatus').textContent = '二维码生成中…（首次要等几秒）'; return; }
+      const url = URL.createObjectURL(await r.blob());
+      const img = $('#qrImg');
+      img.onload = () => URL.revokeObjectURL(url);
+      img.src = url;
+      img.style.display = 'block';
+      $('#qrWait').style.display = 'none';
+      $('#qrStatus').textContent = '扫码确认后会自动完成登录';
+    } catch { $('#qrStatus').textContent = '二维码生成中…'; }
+  };
+  tick();
+  if (qrTimer) clearInterval(qrTimer);
+  qrTimer = setInterval(tick, 3000);
+}
+
+async function startAdd() {
+  const name = $('#accName').value.trim();
+  if (!name) { toast('请先填一个账号备注名'); return; }
+  const tw = addMode === 'traework';
+  const site = tw ? '' : document.querySelector('input[name=accSite]:checked').value;
+  const btn = $('#accGo');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span>正在获取二维码…';
+  $('#addLog').style.display = 'block';
+  $('#addLog').textContent = '正在打开浏览器窗口，请在弹出的窗口里登录…';
+  try {
+    const url = tw
+      ? '/api/traework/add?name=' + encodeURIComponent(name)
+      : '/api/account/add?name=' + encodeURIComponent(name) + '&site=' + site;
+    const d = await (await fetch(url, { method: 'POST' })).json();
+    if (d.error) throw new Error(d.error);
+    if (!tw) startQr(d.name || name);          // WorkBuddy：二维码直接显示在页面里
+    const j = await watchJob(d.id);
+    if (!tw) stopQr();
+    if (j.code === 0) {
+      toast('登录成功，正在读取积分数据…');
+      /* TraeWork 用整站点刷新（其账号名与 WorkBuddy 的 names 过滤不是一套） */
+      const s2 = await (await fetch(
+        tw ? '/api/run?cmd=stats' : '/api/run?cmd=stats&names=' + encodeURIComponent(name),
+        { method: 'POST' }
+      )).json();
+      await watchJob(s2.id);
+      await load();
+      closeAdd();
+      toast('已添加账号：' + name, 6000);
+    } else {
+      toast('登录没有完成，可以关掉窗口后重试', 7000);
+    }
+  } catch (e) {
+    toast('失败：' + e.message);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '开始扫码登录';
+  }
+}
+
+/* TraeWork 网页账号：重新登录 / 删除（桌面来源的账号不在这里管） */
+async function reloginTrae(name, ev) {
+  if (ev) ev.stopPropagation();
+  toast('正在打开登录窗口…');
+  try {
+    const d = await (await fetch('/api/traework/add?name=' + encodeURIComponent(name), { method: 'POST' })).json();
+    if (d.error) throw new Error(d.error);
+    const j = await watchJob(d.id);
+    if (j.code === 0) {
+      const s2 = await (await fetch('/api/run?cmd=stats', { method: 'POST' })).json();
+      await watchJob(s2.id);
+      await load();
+      toast(name + ' 登录成功', 5000);
+    } else toast('登录没有完成，请再试一次', 7000);
+  } catch (e) { toast('失败：' + e.message); }
+}
+
+async function deleteTrae(name, ev) {
+  if (ev) ev.stopPropagation();
+  if (!confirm(`确定删除 TraeWork 账号「${name}」吗？\n\n会清除它的登录态（Cookie）与本地积分记录。`)) return;
+  toast(`正在删除「${name}」…`);
+  try {
+    const res = await (await fetch('/api/traework/delete?name=' + encodeURIComponent(name), { method: 'POST' })).json();
+    if (res.error) throw new Error(res.error);
+    const j = await watchJob(res.id);
+    closeDrawer();
+    await load();
+    toast(j.code === 0 ? '已删除：' + name : '删除可能没成功，刷新看看');
+  } catch (e) { toast('失败：' + e.message); }
+}
+
+async function relogin(name, site, ev) {
+  if (ev) ev.stopPropagation();
+  openAdd('workbuddy');
+  $('#accName').value = name;
+  const wantIntl = (site || '').includes('.ai');
+  const radio = document.querySelector(`input[name=accSite][value="${wantIntl ? 'intl' : 'cn'}"]`);
+  if (radio) radio.checked = true;
+  toast('正在获取登录二维码…');
+  startAdd();
+}
+
+async function deleteAcc(name, ev) {
+  if (ev) ev.stopPropagation();
+  if (!confirm(`确定要彻底删除账号「${name}」吗？\n\n删除后将清除该账号的登录缓存与本地数据。`)) return;
+  toast(`正在删除账号「${name}」…`);
+  try {
+    const res = await (await fetch('/api/account/delete?name=' + encodeURIComponent(name), { method: 'POST' })).json();
+    if (res.error) throw new Error(res.error);
+    const j = await watchJob(res.id);
+    closeDrawer();
+    await load();
+    toast(`已成功删除账号「${name}」`, 4000);
+  } catch (e) {
+    toast('删除失败：' + e.message);
+  }
+}
+
+let renamingFrom = '';
+function openRename(name, ev) {
+  if (ev) ev.stopPropagation();
+  renamingFrom = name;
+  $('#renameInput').value = name;
+  $('#renameModal').classList.add('open');
+  setTimeout(() => { $('#renameInput').focus(); $('#renameInput').select(); }, 60);
+}
+function closeRename() { $('#renameModal').classList.remove('open'); }
+
+async function doRename() {
+  const to = $('#renameInput').value.trim();
+  if (!to) { toast('名字不能为空'); return; }
+  if (to === renamingFrom) { closeRename(); return; }
+  const btn = $('#renameGo');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span>保存中…';
+  try {
+    const d = await (await fetch('/api/account/rename?from=' + encodeURIComponent(renamingFrom) + '&to=' + encodeURIComponent(to), { method: 'POST' })).json();
+    if (d.error) throw new Error(d.error);
+    closeRename();
+    await load();
+    toast('已改名为「' + to + '」', 5000);
+  } catch (e) {
+    toast('改名失败：' + e.message);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '保存';
+  }
+}
+
+$('#qrFallback').onclick = async () => {
+  const name = $('#accName').value.trim() || qrWho;
+  if (!name) return;
+  stopQr();
+  $('#addLog').style.display = 'block';
+  $('#addLog').textContent = '正在打开浏览器窗口…（窗口更占内存，机器忙时可能有点卡）';
+  const site = document.querySelector('input[name=accSite]:checked').value;
+  const d = await (await fetch('/api/account/add?name=' + encodeURIComponent(name) + '&site=' + site + '&window=1', { method: 'POST' })).json();
+  if (d.error) { toast('失败：' + d.error); return; }
+  const j = await watchJob(d.id);
+  if (j.code === 0) {
+    const s2 = await (await fetch('/api/run?cmd=stats&names=' + encodeURIComponent(name), { method: 'POST' })).json();
+    await watchJob(s2.id);
+    await load(); closeAdd(); toast('已添加：' + name, 5000);
+  } else toast('登录没有完成，可以重试', 7000);
+};
+
+$('#renameCancel').onclick = closeRename;
+$('#renameGo').onclick = doRename;
+$('#renameInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') doRename(); });
+$('#renameModal').onclick = (e) => { if (e.target.id === 'renameModal') closeRename(); };
+$('#btnAdd').onclick = () => openAdd('workbuddy');
+$('#btnAddTrae').onclick = () => openAdd('traework');
+$('#accCancel').onclick = closeAdd;
+$('#accGo').onclick = startAdd;
+$('#accName').addEventListener('keydown', (e) => { if (e.key === 'Enter') startAdd(); });
+$('#addModal').onclick = (e) => { if (e.target.id === 'addModal') closeAdd(); };
+$('#btnCheckin').onclick = (e) => runJob('checkin', e.currentTarget);
+$('#btnStats').onclick = (e) => runJob('stats', e.currentTarget);
+$('#btnReload').onclick = load;
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeDrawer(); closeAdd(); closeRename(); } });
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>

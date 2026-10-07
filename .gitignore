@@ -1,0 +1,40 @@
+# ══════════════════════════════════════════════════════════
+#  ⛔ 绝对不能上传：登录态凭据
+#  accounts/*.state.json 含 session / session_2 / KEYCLOAK_SESSION /
+#  AUTH_SESSION_ID 及 localStorage —— 泄露等于别人能接管你的账号
+# ══════════════════════════════════════════════════════════
+accounts/
+profiles/
+*.state.json
+*.trae.json
+
+# ── 本地数据与日志（含账号名、余额、运行记录）──
+data/
+logs/
+*.log
+
+# ── 本机配置（含账号名，用 config.example.json 代替）──
+config.json
+
+# ── 备份与临时文件 ──
+*.bak
+*.bak-*
+dashboard.html.bak*
+/tmp/
+*.tmp-*
+
+# ── 依赖与构建产物 ──
+node_modules/
+build/
+package-lock.json
+
+# ── 含账号名的截图（只保留纯图标，图标不含任何个人信息）──
+docs/看板*.png
+docs/dashboard*.png
+docs/界面-*.png
+docs/图标尺寸*.png
+docs/图标方案*.png
+
+# ── 系统文件 ──
+.DS_Store
+Thumbs.db

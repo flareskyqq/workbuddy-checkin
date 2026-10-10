@@ -14,8 +14,33 @@ set -uo pipefail
 DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$DIR" || exit 1
 
-NODE_BIN="${NODE_BIN:-$(command -v node)}"
 STAMP() { date '+%F %T'; }
+
+# ── 解析 node 路径（必须能扛住 node 版本升级）──
+#    坑：launchd plist 里写死了 NODE_BIN=/…/versions/22.22.2-3/bin/node，
+#    但 managed node 升级成 22.22.2-6 后旧目录被删 → 脚本拿着无效路径一路跑到底，
+#    表现是「定时任务静默失效」。所以这里逐级兜底。
+NODE_BIN="${NODE_BIN:-}"
+if [ ! -x "$NODE_BIN" ]; then
+  [ -n "$NODE_BIN" ] && echo "[$(STAMP)] ⚠️ 配置的 node 不存在：$NODE_BIN，自动回退"
+  # 兜底 1：managed node 里版本号最大的那个
+  NODE_BIN="$(ls -d /Users/apple/.workbuddy-ai/binaries/node/versions/*/bin/node 2>/dev/null | sort -V | tail -1)"
+fi
+if [ ! -x "$NODE_BIN" ]; then
+  # 兜底 2：PATH 里的 node（launchd 环境里 PATH 很干净，常常找不到，但值得一试）
+  NODE_BIN="$(command -v node 2>/dev/null || true)"
+fi
+if [ ! -x "$NODE_BIN" ]; then
+  # 兜底 3：homebrew / 系统常见位置
+  for c in /opt/homebrew/bin/node /usr/local/bin/node /usr/bin/node; do
+    [ -x "$c" ] && { NODE_BIN="$c"; break; }
+  done
+fi
+if [ ! -x "$NODE_BIN" ]; then
+  echo "[$(STAMP)] ❌ 找不到可用的 node，任务中止。请检查 node 安装。"
+  exit 1
+fi
+echo "[$(STAMP)] node: $NODE_BIN（$("$NODE_BIN" -v 2>/dev/null)）"
 
 # ── 1) 等网络就绪（最多等 2 分钟）──
 NET_OK=0

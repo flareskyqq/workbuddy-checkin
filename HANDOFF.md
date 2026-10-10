@@ -279,6 +279,42 @@ K1 / K2 是硬编码的 64 字节常量（见 `trae.mjs` 的 `K1` / `K2`）。
 
 ---
 
+### 4.7 ⚠️ 项目**不能放在 iCloud 同步的目录里**（2026-10-10 重大故障）
+
+**故障现象**：看板反复崩溃（累计 **8290 次**）、定时任务静默失效、日志里全是
+`Error: Unknown system error -11`（= EAGAIN）和 `Operation not permitted`。
+
+**根因**：项目原本在 `~/Desktop/工作/workbuddy-checkin`，而 macOS 开了
+**iCloud「桌面与文档」同步**（`defaults read com.apple.finder FXICloudDriveDesktop` = 1）。
+iCloud 会把不常用的文件**驱逐到云端**，本地只留占位符：
+
+```
+$ stat -f "%z %b" data/state.json
+52326 0        # 52326 字节，但占 0 个磁盘块 = 内容在云端
+```
+
+node 读这种文件 → **`EAGAIN (errno -11)`** → 崩溃。launchd 再拉起 → 再崩 → 死循环。
+同时 launchd 访问 iCloud 托管的 `~/Desktop` 还会被 TCC 拦（`Operation not permitted`）。
+
+**判断方法**（以后遇到类似问题先跑这个）：
+```bash
+for f in *.mjs data/*.json; do
+  sz=$(stat -f %z "$f"); blk=$(stat -f %b "$f")
+  [ "$sz" -gt 4096 ] && [ "$blk" -eq 0 ] && echo "未下载: $f"
+done
+defaults read com.apple.finder FXICloudDriveDesktop   # 1 = 桌面被 iCloud 接管
+```
+
+**修复**：把项目移到 **`~/workbuddy-checkin`**（`~` 根目录不受 iCloud 和 TCC 保护）。
+搬迁后实测：看板连续运行 **10 分钟零崩溃**，定时任务 err.log 全空、5/7 账号签到成功。
+
+**两条硬性约束**：
+1. **项目必须放在 `~/` 下、不要放 Desktop / Documents / Downloads** —— 这三个目录默认被 iCloud 同步 + TCC 保护
+2. launchd plist 里的 `NODE_BIN` **不要写死版本号目录** —— managed node 升级过（`22.22.2-3` → `-6`）旧路径就没了。
+   `daily-checkin.sh` 现已做三级兜底，但 plist 里的路径仍需留意。
+
+---
+
 ## 五、已知问题 / 踩过的坑（接手务必看）
 
 ### 1. 「登录成功但马上失效」的真正原因：保存 Cookie 的时机太早（2026-09-27 定位并修复）

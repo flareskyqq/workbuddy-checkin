@@ -619,8 +619,16 @@ function launchOpts(headless, cfgBrowser) {
     ignoreDefaultArgs: ['--enable-unsafe-swiftshader', '--enable-automation'],
   };
   const want = process.env.WBC_BROWSER || cfgBrowser || 'auto';
-  const hasChrome = fs.existsSync('/Applications/Google Chrome.app');
-  const hasEdge = fs.existsSync('/Applications/Microsoft Edge.app');
+  const isWin = process.platform === 'win32';
+  const isMac = process.platform === 'darwin';
+  const hasChrome = isMac
+    ? fs.existsSync('/Applications/Google Chrome.app')
+    : fs.existsSync('C:/Program Files/Google/Chrome/Application/chrome.exe') ||
+      fs.existsSync('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe');
+  const hasEdge = isMac
+    ? fs.existsSync('/Applications/Microsoft Edge.app')
+    : fs.existsSync('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe') ||
+      fs.existsSync('C:/Program Files/Microsoft/Edge/Application/msedge.exe');
   const pick =
     want === 'edge' && hasEdge ? 'msedge' :
     want === 'chrome' && hasChrome ? 'chrome' :
